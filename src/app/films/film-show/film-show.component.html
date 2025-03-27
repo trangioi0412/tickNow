@@ -1,0 +1,34 @@
+
+
+<div class="film-show">
+    <div class="title">
+      <h3 >Phim Đang Chiếu</h3>
+      <a href="">Xem Tất Cả</a>
+    </div>
+
+    <swiper-container
+    [autoplay]="{ delay: 3000, disableOnInteraction: false }"
+      centered-slides="true"
+      effect="coverflow"
+      grab-cursor="true"
+      slides-per-view="5"
+      space-between="50"
+      loop="true"
+      [loopedSlides]="5"
+      coverflow-effect='{
+        "rotate": 0,
+        "stretch": 50,
+        "depth": 50,
+        "modifier": 4,
+        "slideShadows": false
+      }'
+      hiddenOnClick="true"
+
+      id="mySwiper"
+    >
+      <swiper-slide *ngFor="let film of films">
+        <app-film-item [film]="film"/>
+      </swiper-slide>
+
+    </swiper-container>
+  </div>

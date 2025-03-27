@@ -1,0 +1,52 @@
+<header id="header">
+
+  <div class="logo">
+    <img src="assets/img/logo.png" alt="" class="logo-img">
+  </div>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <i class="fa-solid fa-video"></i>
+        <div class="nav-item-text book-header">
+          <p>Đặt Vé Xem Phim</p>
+        </div>
+      </li>
+      <li class="nav-item"><a href="" class="nav-item-link">Trang Chủ</a></li>
+      <li class="nav-item" (click)="showFilm = !showFilm">
+        Lịch Chiếu
+        <i class="fa-solid" [ngClass]="showFilm ? 'fa-angle-up' : 'fa-angle-down'"></i>
+        @if( showFilm){
+          <div class="nav-item-text-list" @slideDown>
+            <a href="">Phim Đang Chiếu</a>
+            <a href="">Phim Sắp Chiếu</a>
+          </div>
+        }
+      </li>
+      <li class="nav-item"><a href="" class="nav-item-link">Rạp Chiếu</a></li>
+      <li class="nav-item"><a href="" class="nav-item-link">Phim Chiếu</a></li>
+      <li class="nav-item" (click)="showBlog = !showBlog">
+        Blog Phim <i class="fa-solid" [ngClass]="showBlog ? 'fa-angle-up' : 'fa-angle-down'"></i>
+        @if(showBlog){
+          <div class="nav-item-text-list" @slideDown>
+            <a href="">Blog Điện Ảnh</a>
+            <a href="">Phim Chiếu Rạp</a>
+            <a href="">Tổng Hợp Phim</a>
+          </div>
+        }
+      <li class="nav-item"><a href="" class="nav-item-link">Review Phim</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-search">
+    <input type="text" placeholder="Tìm Kiếm Phim">
+    <i class="fa-solid fa-search"></i>
+  </div>
+  <div class="user">
+    <i class="fa-solid fa-user"></i>
+    <div class="user-text">
+      <a href="">Đăng Nhập</a>
+      <a href="">Đăng Ký</a>
+    </div>
+  </div>
+</header>
