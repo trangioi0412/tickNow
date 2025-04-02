@@ -1,0 +1,26 @@
+<h1 class="title">{{title()}}</h1>
+<div class="slider">
+  <swiper-container
+  autoplay="false"
+  effect="slider"
+  grab-cursor="true"
+  slides-per-view="5"
+  space-between="0"
+  loop="false"
+  coverflow-effect='{
+    "rotate": 0,
+    "stretch": 10,
+    "depth": 0,
+    "modifier": 2,
+    "slideShadows": false
+  }'
+  id="mySwiper"
+  >
+  @for (film of data(); track film.id) {
+    <swiper-slide>
+      <app-film-item [film]="film" />
+    </swiper-slide>
+
+  }
+  </swiper-container>
+</div>

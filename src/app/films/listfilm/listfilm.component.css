@@ -1,0 +1,30 @@
+.title{
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 40px;
+}
+
+.slider{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 500px;
+}
+
+.swiper {
+  overflow: visible !important;
+}
+
+
+swiper-container {
+  width: 80%;
+  height: 100%;
+}
+
+swiper-slide {
+  width: 270px;
+  display: flex;
+  justify-content: center;
+}
+

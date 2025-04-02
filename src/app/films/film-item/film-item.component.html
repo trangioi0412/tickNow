@@ -1,4 +1,14 @@
 
 <div class="product-item">
-  <img [src]="film().img"  alt="Slide">
+  <img [src]="'assets/film/'+film().image" alt="Slide">
+  <div class="product_detail">
+      <div class="action">
+        <button class="action_btn action_btn_play" (click)="watchTrailer()" ><i class="fa-solid fa-play"></i></button>
+        <button class="action_btn" (click)="watchDetail()" ><i class="fa-solid fa-exclamation"></i></button>
+      </div>
+      <div class="product_detail_element">
+        <h3 class="product_detail_name">{{film().name}}</h3>
+        <button class="product_detail_btn">Đặt Vé Ngay</button>
+      </div>
+  </div>
 </div>

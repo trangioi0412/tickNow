@@ -1,0 +1,23 @@
+<div *ngIf="check === true" class="detail" @sliderOpen>
+  <div class="detail_background" (click)="closeTrailer()"></div>
+  <div class="film_detail">
+    <div class="film">
+      <button class="close_trailer" (click)="closeTrailer()"><i class="fa-solid fa-x"></i></button>
+      <div class="film_info">
+        <img [src]="'assets/film/'+filmDetail?.image" alt="">
+        <div class="film_info_text">
+          <h3>{{filmDetail?.name}}</h3>
+          <p><strong>Độ Tuổi: </strong> <span>{{filmDetail?.age}}+</span></p>
+          <p><strong>Thể Loại: </strong><span>{{filmDetail?.category}}</span></p>
+          <p><strong>Ngày Chiếu: </strong> <span>{{filmDetail?.date}}</span></p>
+          <p><strong>Thời Lượng: </strong> <span>{{filmDetail?.time}}</span></p>
+          <p><strong>Đạo Diễn: </strong><span>{{filmDetail?.director}}</span></p>
+          <button class="film_buyNow">Đặt Vé Ngay</button>
+        </div>
+      </div>
+      <div class="film_Summary">
+        <p>{{filmDetail?.text_summary}}</p>
+      </div>
+    </div>
+  </div>
+</div>

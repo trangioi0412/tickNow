@@ -1,5 +1,7 @@
 <div id="slider">
   <img src="https://static.vecteezy.com/system/resources/previews/002/236/321/non_2x/movie-trendy-banner-vector.jpg" alt="">
 </div>
-
-<app-film-show/>
+<app-listfilm [data]="filmComingSoon" title="Phim Đang Chiếu"/>
+<app-listfilm [data]="filmComing" title="Phim Sắp Chiếu"/>
+<app-trailer />
+<app-detail-pop-up />

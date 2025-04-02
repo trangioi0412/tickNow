@@ -1,0 +1,8 @@
+<div *ngIf="check === true" class="trailer" @sliderOpen>
+  <div class="trailer_background" (click)="closeTrailer()"></div>
+  <div class="trailer_film">
+    <button class="close_trailer" (click)="closeTrailer()"><i class="fa-solid fa-x"></i></button>
+    <h1 class="trailer_film_name">{{filmTrailer?.name}}</h1>
+    <iframe [src]="safeTrailerUrl" frameborder="0" class="trailer_film_video"></iframe>
+  </div>
+</div>
